@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/warm"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ToggleButton
+        android:id="@+id/dark"
+        android:layout_width="45dp"
+        android:layout_height="44dp"
+        android:layout_gravity="right"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/sun" />
+
+    <TextView
+        android:id="@+id/com"
+        android:layout_width="201dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:text="Computer"
+        android:textAlignment="center"
+        android:textSize="35sp" />
+
+    <ImageView
+        android:id="@+id/c_image"
+        android:layout_width="237dp"
+        android:layout_height="152dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:id="@+id/score"
+        android:layout_width="334dp"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:text=""
+        android:textAlignment="center"
+        android:textSize="30sp" />
+
+    <ImageView
+        android:id="@+id/p_image"
+        android:layout_width="234dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp" />
+
+    <TextView
+        android:id="@+id/you"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:text="You"
+        android:textAlignment="center"
+        android:textSize="36sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="71dp"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/b_rock"
+            android:layout_width="105dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:backgroundTint="#ff482d"
+            android:text="Rock"
+            android:textSize="19sp"
+            app:cornerRadius="30sp" />
+
+        <Button
+            android:id="@+id/b_paper"
+            android:layout_width="105dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:backgroundTint="#ff482d"
+            android:text="Paper"
+            android:textSize="19sp"
+            app:cornerRadius="30sp" />
+
+        <Button
+            android:id="@+id/b_scissors"
+            android:layout_width="105dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:backgroundTint="#ff482d"
+            android:text="scissors"
+            android:textSize="15sp"
+            app:cornerRadius="30sp" />
+    </LinearLayout>
+
+</LinearLayout>
