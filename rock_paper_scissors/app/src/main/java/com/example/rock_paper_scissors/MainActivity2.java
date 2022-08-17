@@ -55,6 +55,9 @@ public class MainActivity2 extends AppCompatActivity {
         mediaPlayer.setLooping(true);
         mediaPlayer.start();
 
+        Intent win = new Intent(MainActivity2.this, MainActivity3.class);
+        Intent lose = new Intent(MainActivity2.this, MainActivity4.class);
+
 
 
         b_rock.setOnClickListener(new View.OnClickListener() {
@@ -62,9 +65,18 @@ public class MainActivity2 extends AppCompatActivity {
             public void onClick(View view) {
 
                 p_image.setImageResource(R.drawable.rockk3);
-                String message = play_turn("rock");
-                Toast.makeText(MainActivity2.this, message, Toast.LENGTH_SHORT).show();
+                play_turn("rock");
                 score.setText("You:" + Integer.toString(HumanScore) + " / Computer:" + Integer.toString(ComputerScore));
+
+                if (ComputerScore == 5){
+                    startActivity(lose);
+                    Toast.makeText(MainActivity2.this, "You Lost!", Toast.LENGTH_SHORT).show();
+                }
+
+                if (HumanScore == 5){
+                    startActivity(win);
+                    Toast.makeText(MainActivity2.this, "You Won!", Toast.LENGTH_SHORT).show();
+                }
 
 
             }
@@ -75,10 +87,18 @@ public class MainActivity2 extends AppCompatActivity {
             public void onClick(View view) {
 
                 p_image.setImageResource(R.drawable.paper3);
-                String message = play_turn("paper");
-                Toast.makeText(MainActivity2.this, message, Toast.LENGTH_SHORT).show();
+                play_turn("paper");
                 score.setText("You:" + Integer.toString(HumanScore) + " / Computer:" + Integer.toString(ComputerScore));
 
+                if (HumanScore == 5){
+                    startActivity(win);
+                    Toast.makeText(MainActivity2.this, "You Won!", Toast.LENGTH_SHORT).show();
+                }
+
+                if (ComputerScore == 5){
+                    startActivity(lose);
+                    Toast.makeText(MainActivity2.this, "You Lost!", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
@@ -87,9 +107,18 @@ public class MainActivity2 extends AppCompatActivity {
             public void onClick(View view) {
 
                 p_image.setImageResource(R.drawable.scissors3);
-                String message = play_turn("scissors");
-                Toast.makeText(MainActivity2.this, message, Toast.LENGTH_SHORT).show();
+                play_turn("scissors");
                 score.setText("You: " + Integer.toString(HumanScore) + " / Computer: " + Integer.toString(ComputerScore));
+
+                if (HumanScore == 5){
+                    startActivity(win);
+                    Toast.makeText(MainActivity2.this, "You Won!", Toast.LENGTH_SHORT).show();
+                }
+
+                if (ComputerScore == 5){
+                    startActivity(lose);
+                    Toast.makeText(MainActivity2.this, "You Lost!", Toast.LENGTH_SHORT).show();
+                }
 
             }
         });
@@ -114,7 +143,7 @@ public class MainActivity2 extends AppCompatActivity {
 
     }
 
-    public String play_turn(String player_choice) {
+    public void play_turn(String player_choice) {
 
         String computer_choice = "";
         Random r = new Random();
@@ -141,26 +170,26 @@ public class MainActivity2 extends AppCompatActivity {
 
 
         if (computer_choice == player_choice) {
-            return "Draw.Nobody won.";
+
         } else if (player_choice == "rock" && computer_choice == "scissors") {
             HumanScore++;
-            return "Rock crushes scissors.You win!";
+
         } else if (player_choice == "rock" && computer_choice == "paper") {
             ComputerScore++;
-            return "Paper covers rock.Computer wins!";
+
         } else if (player_choice == "scissors" && computer_choice == "rock") {
             ComputerScore++;
-            return "Rock crushes scissors.Computer wins!";
+
         } else if (player_choice == "scissors" && computer_choice == "paper") {
             HumanScore++;
-            return "Scissors cuts paper.You win!";
+
         } else if (player_choice == "paper" && computer_choice == "rock") {
             HumanScore++;
-            return "Paper covers rock.You win!";
+
         } else if (player_choice == "paper" && computer_choice == "scissors") {
             ComputerScore++;
-            return "Scissors cuts paper.Computer wins!";
-        }else return "not sure";
+
+        }
 
     }
 

@@ -14,50 +14,50 @@
         android:layout_width="45dp"
         android:layout_height="44dp"
         android:layout_gravity="right"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_marginRight="20dp"
         android:background="@drawable/sun"
         android:backgroundTint="#ff482d"/>
 
     <TextView
         android:id="@+id/com"
-        android:layout_width="275dp"
-        android:layout_height="wrap_content"
+        android:layout_width="306dp"
+        android:layout_height="134dp"
         android:layout_gravity="center"
-        android:text="Welcome To"
+        android:layout_marginTop="30dp"
+        android:text="You Won!😄"
         android:textAlignment="center"
         android:textColor="#07BAA3"
-        android:textSize="45sp" />
-
-    <ImageView
-        android:id="@+id/v_image"
-        android:layout_width="wrap_content"
-        android:layout_height="251dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="60dp"
-        android:src="@drawable/rock_paper_sissors" />
-
+        android:textSize="55sp" />
 
     <TextView
-        android:id="@+id/textView3"
-        android:layout_width="273dp"
+        android:id="@+id/points"
+        android:layout_width="214dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="40dp"
-        android:text="Classic Game"
+        android:layout_marginTop="10dp"
+        android:text="with 5 points!"
         android:textAlignment="center"
-        android:textColor="#07BAA3"
         android:textSize="30sp" />
+
+    <ImageView
+        android:id="@+id/c_image"
+        android:layout_width="324dp"
+        android:layout_height="252dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/win" />
 
     <Button
         android:id="@+id/play"
         android:layout_width="262dp"
         android:layout_height="80dp"
         android:layout_gravity="center"
-        android:layout_marginTop="71dp"
+        android:layout_marginTop="45dp"
         android:backgroundTint="#ff482d"
-        android:text="Let's Play!"
+        android:text="Play again!"
         android:textSize="30sp"
         app:cornerRadius="30sp" />
+
 
 </LinearLayout>
